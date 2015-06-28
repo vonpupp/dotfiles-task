@@ -1,0 +1,9 @@
+setup
+
+# TASKWARRIOR
+home/.task/data
+
+# SECRETS
+home/.envars/
+account
+passwd

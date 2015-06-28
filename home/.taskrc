@@ -1,0 +1,53 @@
+# [Created by task 2.1.2 2/19/2014 00:18:47]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
+# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/.task/data
+uda.area.type=string
+uda.area.label=Area
+
+# Color theme (uncomment one to use)
+#include /usr/share/doc/task/rc/light-16.theme
+#include /usr/share/doc/task/rc/light-256.theme
+#include /usr/share/doc/task/rc/dark-16.theme
+#include /usr/share/doc/task/rc/dark-256.theme
+#include /usr/share/doc/task/rc/dark-red-256.theme
+#include /usr/share/doc/task/rc/dark-green-256.theme
+#include /usr/share/doc/task/rc/dark-blue-256.theme
+#include /usr/share/doc/task/rc/dark-violets-256.theme
+#include /usr/share/doc/task/rc/dark-yellow-green.theme
+#include /usr/share/doc/task/rc/dark-gray-256.theme
+
+#taskd.server=azapps.de:6544
+#taskd.credentials=albert/albert/9011331c-2e7e-4dd2-b2f3-b06e4dd1bf50
+#taskd.certificate=~/Dropbox/appdata/taskwarrior/client.pem
+#taskd.ca=~/Dropbox/appdata/taskwarrior/ca.pem
+#taskd.key=~/Dropbox/appdata/taskwarrior/client.key.pem
+taskd.server=freecinc.com:53589
+taskd.key=~/.task/certs/freecinc_d256d5be.key.pem
+taskd.certificate=~/.task/certs/freecinc_d256d5be.cert.pem
+taskd.ca=~/.task/certs/freecinc_d256d5be.ca.pem
+taskd.credentials=FreeCinc\/freecinc_d256d5be\/788729ef-ef06-4c2c-9ec6-79632c322684
+
+#report.minimal.columns=id,entry.age,area,project,tags,due,dur,until,description
+report.vonpupp.description=Lists all tasks matching the specified criteria
+report.vonpupp.columns=id,due,project,tags,entry.age,until,description
+report.vonpupp.labels=ID,due,Project,Tags,Age,Until,Description
+report.vonpupp.sort=priority-,project+,due+
+report.vonpupp.filter=status:pending
+report.vonpupp.dateformat=b.D
+
+report.vim.columns=id,area,project,status,entry.age,priority,due,end,description,depends,tags,uuid
+report.vim.sort=status+,project+,due+,priority-,description+,id+
+defaultwidth=999
+editor=vim
+dateformat=d/m/Y
