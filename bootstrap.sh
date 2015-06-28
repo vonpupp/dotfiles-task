@@ -1,7 +1,9 @@
 #!/bin/sh
 DIRNAME=`dirname $0`
 
-git clone https://github.com/vonpupp/bootstrap.castle $DIRNAME/setup
-$DIRNAME/setup/do-bootstrap.sh
-01-create-virtualenv.sh
-02-gcalcli-oauth.sh
+source $DIRNAME/.vars
+source ~/.homesick/repos/homeshick/homeshick.sh
+homeshick link $REPO_NAME
+
+$DIRNAME/01-create-virtualenv.sh
+$DIRNAME/02-gcalcli-oauth.sh
