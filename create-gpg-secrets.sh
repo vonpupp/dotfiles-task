@@ -7,8 +7,8 @@ echo "$2" > $PASS_PATH/passwd
 
 #gpg -c $PASS_PATH/account
 #gpg -c $PASS_PATH/passwd
-gpg -er vonpupp@keybase.io $PASS_PATH/account
-gpg -er vonpupp@keybase.io $PASS_PATH/passwd
+gpg2 -er vonpupp@keybase.io $PASS_PATH/account
+gpg2 -er vonpupp@keybase.io $PASS_PATH/passwd
 
 rm $PASS_PATH/account
 rm $PASS_PATH/passwd
