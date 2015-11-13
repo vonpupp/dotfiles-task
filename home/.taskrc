@@ -33,10 +33,10 @@ uda.area.label=Area
 #taskd.ca=~/Dropbox/appdata/taskwarrior/ca.pem
 #taskd.key=~/Dropbox/appdata/taskwarrior/client.key.pem
 taskd.server=freecinc.com:53589
-taskd.key=~/.task/certs/freecinc_d256d5be.key.pem
-taskd.certificate=~/.task/certs/freecinc_d256d5be.cert.pem
-taskd.ca=~/.task/certs/freecinc_d256d5be.ca.pem
-taskd.credentials=FreeCinc\/freecinc_d256d5be\/788729ef-ef06-4c2c-9ec6-79632c322684
+taskd.key=\/home\/av\/.task\/certs/freecinc_d712a177.key.pem
+taskd.certificate=\/home\/av\/.task\/certs/freecinc_d712a177.cert.pem
+taskd.ca=\/home\/av\/.task\/certs/freecinc_d712a177.ca.pem
+taskd.credentials=FreeCinc\/freecinc_d712a177\/f1266bb8-2f81-4716-a70a-d91807d8f0e7
 
 #report.minimal.columns=id,entry.age,area,project,tags,due,dur,until,description
 report.vonpupp.description=Lists all tasks matching the specified criteria
@@ -51,3 +51,36 @@ report.vim.sort=status+,project+,due+,priority-,description+,id+
 defaultwidth=999
 editor=vim
 dateformat=d/m/Y
+
+context.work=+@computer or +@phone or +@online or +@work +@print +@scan +@usp
+context.home=+@computer or +@phone or +@online or +@home -@print -@scan
+
+#report.next.description     = Most urgent tasks
+#report.next.columns         = id,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description
+#report.next.filter          = status:pending and +next
+#report.next.labels          = ID,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description
+#report.next.sort            = priority-,urgency-
+
+report.in.description       = IN tasks
+report.in.columns           = id,description
+report.in.description       = Inbox
+report.in.filter            = status:pending limit:page (+in)
+report.in.labels            = ID,Description
+
+report.next.description     = NEXT tasks
+report.next.columns         = id,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description
+report.next.filter          = status:pending and +next
+report.next.labels          = ID,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description
+report.next.sort            = priority-,urgency-
+
+report.tickle.description   = TICKLED tasks
+report.tickle.columns       = id,wait,wait.remaining,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description
+report.tickle.filter        = status:waiting and +tickle
+report.tickle.labels        = ID,Wait,Remaining,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description
+report.tickle.sort          = priority-,urgency-
+
+report.maybe.description    = MAYBE tasks
+report.maybe.columns        = id,wait,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description
+report.maybe.filter         = status:waiting and +maybe
+report.maybe.labels         = ID,Wait,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description
+report.maybe.sort           = priority-,urgency-

@@ -1,0 +1,10 @@
+task_id=$1
+shift
+when_to_tickle=$1
+shift
+wait_time=`task _get $task_id.wait`
+task $task_id modify +in +tickle wait:$when_to_tickle
+
+#deadline=$1
+#shift
+#task add +in +tickle wait:$deadline $@

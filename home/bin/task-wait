@@ -1,0 +1,5 @@
+task_id=$1
+shift
+wait_time=$1
+shift
+task $task_id annotate $@ wait:$wait_time -in +waiting
