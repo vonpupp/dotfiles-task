@@ -81,6 +81,12 @@ report.tickle.sort          = priority-,urgency-
 
 report.maybe.description    = MAYBE tasks
 report.maybe.columns        = id,wait,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description
-report.maybe.filter         = status:waiting and +maybe
+report.maybe.filter         = status:pending and +maybe
 report.maybe.labels         = ID,Wait,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description
 report.maybe.sort           = priority-,urgency-
+
+report.waiting.description  = WAITING tasks
+report.waiting.columns      = id,wait,start.age,entry.age,urgency,depends,priority,project,tags,recur,scheduled.countdown,due.remaining,until.remaining,description
+report.waiting.filter       = status:waiting
+report.waiting.labels       = ID,Wait,Active,Age,Urgency,Deps,P,Project,Tag,Recur,S,Due,Until,Description
+report.waiting.sort         = priority-,urgency-

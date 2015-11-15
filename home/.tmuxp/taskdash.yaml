@@ -1,0 +1,60 @@
+session_name: taskdash
+windows:
+- window_name: TASK-DASH
+  #layout: main-vertical
+  layout: tiled
+  focus: true
+  automatic_rename: true
+  panes:
+    - shell_command:
+      - task in
+      focus: true
+      main-pane-height: 30
+    - shell_command:
+      - task next
+    - shell_command:
+      - task tickle
+    - shell_command:
+      - task posponed
+    - shell_command:
+      - task burndown.daily +next
+    - shell_command:
+      - task ghistory
+#    - shell_command:
+#      - task ls +code
+#    - shell_command:
+#      - task ls project:albertdelafuente.com
+#    - shell_command:
+#      - task ls project:albertdelafuente.com
+- window_name: TASK-MONTHLY
+  layout: main-vertical
+  panes:
+    - shell_command:
+      - task burndown.monthly +next
+    - shell_command:
+      - task calendar
+    - shell_command:
+      - task burndown.daily project:Kitchen
+
+#  options:
+#    main-pane-height: 30
+#
+# in                          (BACKLOG)
+
+  # (eliminate)
+  #   - task-rm
+  # maybe
+  #   - task-incubate
+  # (reference)
+
+    # next                        (DOING)
+    #   - (right away <2min)
+    #   - task-project (est_time)
+    #   - task-next (est_time)    (???)
+    #   - task-rnd (est_time)
+
+    # wait                        (WAIT)
+    #   - task-tickle             (+tickle)     -> +in
+    #   - task-posponed           (+posponed)   -> +in
+    #   - task-wait (annotate)
+    #   - task-next
