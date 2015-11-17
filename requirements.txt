@@ -1,2 +1,4 @@
 vobject
 parsedatetime
+anyjson
+taskwarrior-time-tracking-hook

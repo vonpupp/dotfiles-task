@@ -1,0 +1,7 @@
+reminder_in=2d
+wait_time=`task _get $task_id.wait`
+
+task_id=$1
+shift
+./task-annotate $task_id $@
+task $task_id modify +in +tickle +waitfor +tracking wait:$wait_time+$reminder_in priority:H

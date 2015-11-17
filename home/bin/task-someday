@@ -1,0 +1,3 @@
+task_id=$@
+shift
+task $task_id modify -in +someday priority:L

@@ -2,5 +2,4 @@ task_id=$1
 shift
 project_id=$1
 shift
-wait_time=`task _get $task_id.wait`
-task $task_id modify +next project:$project_id
+task $task_id modify project:$project_id

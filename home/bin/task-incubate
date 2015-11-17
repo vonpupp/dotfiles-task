@@ -1,4 +1,0 @@
-task_id=$1
-wait_time=`task _get $task_id.wait`
-shift
-task $task_id modify -in +maybe

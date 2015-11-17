@@ -1,0 +1,5 @@
+task_id=$1
+shift
+when_to_tickle=$1
+shift
+task $task_id modify +in +tickle wait:$when_to_tickle
