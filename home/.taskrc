@@ -37,11 +37,18 @@ uda.totalactivetime.values=
 #taskd.certificate=~/Dropbox/appdata/taskwarrior/client.pem
 #taskd.ca=~/Dropbox/appdata/taskwarrior/ca.pem
 #taskd.key=~/Dropbox/appdata/taskwarrior/client.key.pem
-taskd.server=freecinc.com:53589
-taskd.key=\/home\/av\/.task\/certs/freecinc_d712a177.key.pem
-taskd.certificate=\/home\/av\/.task\/certs/freecinc_d712a177.cert.pem
-taskd.ca=\/home\/av\/.task\/certs/freecinc_d712a177.ca.pem
-taskd.credentials=FreeCinc\/freecinc_d712a177\/f1266bb8-2f81-4716-a70a-d91807d8f0e7
+
+#taskd.server=freecinc.com:53589
+#taskd.key=\/home\/av\/.task\/certs/freecinc_d712a177.key.pem
+#taskd.certificate=\/home\/av\/.task\/certs/freecinc_d712a177.cert.pem
+#taskd.ca=\/home\/av\/.task\/certs/freecinc_d712a177.ca.pem
+#taskd.credentials=FreeCinc\/freecinc_d712a177\/f1266bb8-2f81-4716-a70a-d91807d8f0e7
+
+#taskd.server=taskwarrior.inthe.am:53589
+#taskd.certificate=~/.task/certs/private.certificate.pem
+#taskd.key=~/.task/certs/private.key.pem
+#taskd.ca=~/.task/certs/ca.cert.pem
+#taskd.credentials=inthe_am/vonpupp/c47e4fb4-01b1-4464-a7a6-7ef86f881c21
 
 report.vim.columns=id,area,project,status,entry.age,priority,due,end,description,depends,tags,uuid
 report.vim.sort=status+,project+,due+,priority-,description+,id+
@@ -107,3 +114,9 @@ report.timecomparison.columns     = id,totalactivetime,estimate,description.desc
 report.timecomparison.filter      = (status:waiting or status:pending)
 report.timecomparison.labels      = ID,RT,ET,Desc
 report.timecomparison.sort        = priority-,urgency-
+taskd.certificate=/home/av/.task/data/private.cert
+taskd.key=/home/av/.task/data/private.key
+taskd.ca=/home/av/.task/data/ca.cert.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/vonpupp/c47e4fb4-01b1-4464-a7a6-7ef86f881c21
+taskd.trust=ignore hostname
