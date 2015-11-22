@@ -1,5 +1,5 @@
 task_id=$1
 shift
 
-./task-annotate $task_id $@
+task-annotate $task_id $@
 task $task_id modify +waitfor -in priority:L
