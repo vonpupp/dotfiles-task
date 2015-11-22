@@ -1,30 +1,22 @@
 session_name: taskdash
 windows:
 - window_name: TASK-DASH
-  #layout: main-vertical
-  layout: tiled
+  layout: main-vertical
+  #layout: tiled
   focus: true
   automatic_rename: true
   panes:
+    - shell_command:
+      - task tickle
+      - task waitfor
+      - task tracking
+      - task posponed
+      - task someday
     - shell_command:
       - task in
       focus: true
     - shell_command:
       - task next
-    - shell_command:
-      - task tickle
-    - shell_command:
-      - task waitfor
-    - shell_command:
-      - task tracking
-    - shell_command:
-      - task posponed
-    - shell_command:
-      - task someday
-    - shell_command:
-      - task burndown.daily +next
-    - shell_command:
-      - task burndown.monthly +next
 #    - shell_command:
 #      - task ls +code
 #    - shell_command:
@@ -37,10 +29,11 @@ windows:
   main-pane-height: 10
   panes:
     - shell_command:
+      - task burndown.daily +next
+        #- task burndown.daily project:Kitchen
+    - shell_command:
       - task burndown.monthly +next
     - shell_command:
       - task calendar
-    - shell_command:
-      - task burndown.daily project:Kitchen
     - shell_command:
       - task ghistory
