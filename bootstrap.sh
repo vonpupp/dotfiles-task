@@ -5,5 +5,5 @@ source $DIRNAME/.vars
 source ~/.homesick/repos/homeshick/homeshick.sh
 homeshick link $REPO_NAME
 
-$DIRNAME/01-create-virtualenv.sh
-$DIRNAME/02-gcalcli-oauth.sh
+#$DIRNAME/01-create-virtualenv.sh
+#$DIRNAME/02-gcalcli-oauth.sh
