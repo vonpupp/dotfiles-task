@@ -1,1 +1,1 @@
-tmuxp load taskdash.yaml
+tmuxp load ~/.tmuxp/taskdash.yaml
