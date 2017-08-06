@@ -64,9 +64,14 @@ context.home=+@computer or +@phone or +@online or +@home -@print -@scan
 context.offline=+@computer or +@phone or -@online or +@home or +@work -@print -@scan
 
 report.in.description       = IN tasks
-report.in.columns           = id,description
+report.in.columns           = id,tags,description
 report.in.filter            = status:pending limit:page (+in)
-report.in.labels            = ID,Description
+report.in.labels            = ID,Tags,Description
+
+report.sim.description       = IN tasks
+report.sim.columns           = id,tags,description
+report.sim.filter            = status:pending limit:page (project:esagp)
+report.sim.labels            = ID,Tags,Description
 
 report.someday.description  = SOMEDAY tasks
 report.someday.columns      = id,description
@@ -81,9 +86,9 @@ report.waitfor.labels       = ID,Active,Deps,Project,Recur,S,Due,Until,Descripti
 report.waitfor.sort         = priority-,urgency-
 
 report.next.description     = NEXT tasks
-report.next.columns         = id,estimate,start.age,entry.age,depends,priority,project,recur,scheduled.countdown,due.remaining,until.remaining,description
+report.next.columns         = id,tags,estimate,start.age,entry.age,depends,priority,project,recur,scheduled.countdown,due.remaining,until.remaining,description
 report.next.filter          = status:pending +next
-report.next.labels          = ID,E,Active,Age,Deps,P,Project,Recur,S,Due,Until,Description
+report.next.labels          = ID,Tags,E,Active,Age,Deps,P,Project,Recur,S,Due,Until,Description
 report.next.sort            = estimate+,priority-,urgency-,estimate-
 
 report.tickle.description   = TICKLED tasks
