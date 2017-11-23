@@ -68,11 +68,6 @@ report.in.columns           = id,tags,description
 report.in.filter            = status:pending limit:page (+in)
 report.in.labels            = ID,Tags,Description
 
-report.sim.description       = IN tasks
-report.sim.columns           = id,tags,description
-report.sim.filter            = status:pending limit:page (project:esagp)
-report.sim.labels            = ID,Tags,Description
-
 report.someday.description  = SOMEDAY tasks
 report.someday.columns      = id,description
 report.someday.filter       = (status:waiting or status:pending) and +someday
@@ -121,3 +116,101 @@ report.timecomparison.columns     = id,totalactivetime,estimate,description.desc
 report.timecomparison.filter      = (status:waiting or status:pending)
 report.timecomparison.labels      = ID,RT,ET,Desc
 report.timecomparison.sort        = priority-,urgency-
+
+
+### SIM
+
+report.simall.description       = SIM - all pending tasks
+report.simall.columns           = id,tags,description
+report.simall.filter            = status:pending project:esagp
+report.simall.labels            = ID,Tags,Description
+
+report.simdo.description        = SIM - do tasks
+report.simdo.columns            = id,tags,description
+report.simdo.filter             = status:pending project:esagp +do
+report.simdo.labels             = ID,Tags,Description
+
+report.simdoc.description       = SIM - doc tasks
+report.simdoc.columns           = id,tags,description
+report.simdoc.filter            = status:pending project:esagp +doc
+report.simdoc.labels            = ID,Tags,Description
+
+report.simlim.description       = SIM - lim tasks
+report.simlim.columns           = id,tags,description
+report.simlim.filter            = status:pending project:esagp +lim
+report.simlim.labels            = ID,Tags,Description
+
+report.simcom.description       = SIM - com tasks
+report.simcom.columns           = id,tags,description
+report.simcom.filter            = status:pending project:esagp +com
+report.simcom.labels            = ID,Tags,Description
+
+report.simrep.description       = SIM - rep tasks
+report.simrep.columns           = id,tags,description
+report.simrep.filter            = status:pending project:esagp +rep
+report.simrep.labels            = ID,Tags,Description
+
+report.simcasa.description      = SIM - casa tasks
+report.simcasa.columns          = id,tags,description
+report.simcasa.filter           = status:pending project:esagp +casa
+report.simcasa.labels           = ID,Tags,Description
+
+report.simcentro.description    = SIM - region centro tasks
+report.simcentro.columns        = id,tags,description
+report.simcentro.filter         = status:pending project:esagp +centro
+report.simcentro.labels         = ID,Tags,Description
+
+report.simteatinos.description  = SIM - region teatinos tasks
+report.simteatinos.columns      = id,tags,description
+report.simteatinos.filter       = status:pending project:esagp +teatinos
+report.simteatinos.labels       = ID,Tags,Description
+
+report.simdelicias.description  = SIM - region delicias tasks
+report.simdelicias.columns      = id,tags,description
+report.simdelicias.filter       = status:pending project:esagp +delicias
+report.simdelicias.labels       = ID,Tags,Description
+
+report.simikaros.description    = SIM - ikaros tasks
+report.simikaros.columns        = id,tags,description
+report.simikaros.filter         = status:pending project:esagp +ikaros
+report.simikaros.labels         = ID,Tags,Description
+
+report.simtelefono.description  = SIM - telefono tasks
+report.simtelefono.columns      = id,tags,description
+report.simtelefono.filter       = status:pending project:esagp +telefono
+report.simtelefono.labels       = ID,Tags,Description
+
+report.simcomputador.description = SIM - computador tasks
+report.simcomputador.columns     = id,tags,description
+report.simcomputador.filter      = status:pending project:esagp +computador
+report.simcomputador.labels      = ID,Tags,Description
+
+report.simand.description       = SIM - piso and tasks
+report.simand.columns           = id,tags,description
+report.simand.filter            = status:pending project:esagp +and
+report.simand.labels            = ID,Tags,Description
+
+report.simmaq.description       = SIM - piso maq tasks
+report.simmaq.columns           = id,tags,description
+report.simmaq.filter            = status:pending project:esagp +maq
+report.simmaq.labels            = ID,Tags,Description
+
+report.simmun.description       = SIM - piso mun tasks
+report.simmun.columns           = id,tags,description
+report.simmun.filter            = status:pending project:esagp +mun
+report.simmun.labels            = ID,Tags,Description
+
+report.simcav.description       = SIM - piso cav tasks
+report.simcav.columns           = id,tags,description
+report.simcav.filter            = status:pending project:esagp +cav
+report.simcav.labels            = ID,Tags,Description
+
+report.simlep.description       = SIM - piso lep tasks
+report.simlep.columns           = id,tags,description
+report.simlep.filter            = status:pending project:esagp +lep
+report.simlep.labels            = ID,Tags,Description
+
+report.simmar.description       = SIM - piso mar tasks
+report.simmar.columns           = id,tags,description
+report.simmar.filter            = status:pending project:esagp +mar
+report.simmar.labels            = ID,Tags,Description
